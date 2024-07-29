@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Encuestas Calidad
+    </title>
+ 
+    <style>
+ 
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+            /*background-color: #05c46b;*/
+            font-family: Montserrat;
+            text-align: center;
+            font-size: 14px;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 0px auto;
+            padding: 30px 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+         .form-control1 {
+            text-align: left;
+            margin-top: 10px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 7px;
+            margin-top: 20px;
+        }
+ 
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: #fccb65;
+            border: 1px solid #fccb65;
+            color: #FFF;
+            padding: 5PX;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        img{
+            width: 108%;
+            margin-left: -20px;
+            margin-top: -30px;
+        }
+
+        p{
+            color: #777;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        .tab-container {
+  position: relative;
+  padding-top: var(--tabs-height); /* en esta zona colocaremos las pestañas */
+} 
+.tabs { 
+  margin: 37px;
+  color: #fff;
+  text-align: left !important;
+}
+.tab-content {
+ 
+  padding: 6px;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  z-index: 100;
+}
+.tab>a {
+  
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 0;
+}
+.tab:target>a, .tab:last-of-type>a {
+  background-color:#93b3cb; 
+  z-index: 200;
+}
+.tab:target ~ .tab:last-of-type>a {
+  background-color: #225a78; 
+  z-index: 0; 
+}
+
+h3{
+      padding-left: 45px;
+      display: inline-block;
+}
+
+table, td, th {
+  border-bottom: 0.5px solid #77777794;
+  PADDING: 10PX 8PX;
+      text-align: left;
+    font-size: 13px;
+}
+
+.input{
+    text-align: right;
+}
+
+select{
+    border: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 5PX;
+  font-size: 16px;
+}
+
+input{
+ /* margin: 10px !important;*/
+  margin-right: 10px !important;
+
+}
+
+td{
+  margin: 30px 0;
+}
+tr{
+  margin: 30px 0;
+}
+
+.colum{
+  transform: none !important;
+  text-decoration: none!important;
+}
+
+.fila1{
+  padding: 6px; 
+  text-align: center;
+} 
+
+    </style>
+</head>
+  
+<body>
+    
+    <!-- Create Form -->
+    <form id="form">
+         <img src="banner-ciara.jpg"></img>
+  
+        <!-- Details -->
+        <div class="form-control1">
+            <label for="name" id="label-name">
+                Nombre: <p>#Nombre</p>
+            </label>
+        </div>
+  
+        <div class="form-control1">
+            <label for="email" id="label-email">
+                Vehículo: <p>#Vehiculo</p>
+            </label>
+        </div>
+
+        <div class="form-control1">
+            <label for="email" id="label-email">
+                Patente: <p>#Patente</p>
+            </label>
+        </div>
+  
+            <div class="tab-content">
+                <TABLE style="margin-top: 20px;">
+                                             
+                            
+                        <TR>
+                            <TD>Con respecto a la atención por parte del vendedor ¿está usted totalmente satisfecho?</TD>
+                            
+                            <TD class="input"><input type="radio"  name="radio" value="P2R9" id="P2R9" onclick="almacenarSeleccion(''RP2VENTA'', P2R9.value);"> </TD>
+                            
+                        </TR>
+
+                        <TR>
+                            <TD>Con respecto a la limpieza y estado de la carrocería en el momento de la entrega ¿está usted totalmente satisfecho?</TD>
+                            
+                            <TD class="input"><input type="radio"  name="radio" value="P2R9" id="P2R9" onclick="almacenarSeleccion(''RP2VENTA'', P2R9.value);"> </TD>
+                            
+                        </TR>
+
+                        <TR>
+                            <TD>Con respecto a la compra y negociación de su vehículo ¿está usted totalmente satisfecho?</TD>
+                        
+                            
+                            <TD class="input">  <select name="role" id="role">
+                <option value="student">1</option>
+                <option value="intern">2</option>
+                <option value="professional">3 </option>
+                <option value="other">4</option>
+                <option value="student">5</option>
+                <option value="intern">6</option>
+                <option value="professional">7</option>
+                <option value="other">8</option>
+            </select></TD>
+                          
+                        </TR>
+
+                        </TABLE>
+                </div> 
+
+
+     <!--    <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+ 
+            <input type="text"
+                   id="age"
+                   placeholder="Enter your age" />
+        </div>
+  
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+             
+            
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">
+                    Professional
+                </option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <label>
+                Would you recommed GeeksforGeeks
+                to a friend?
+            </label>
+ 
+           
+            <label for="recommed-1">
+                <input type="radio"
+                       id="recommed-1"
+                       name="recommed">Yes</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio"
+                       id="recommed-2"
+                       name="recommed">No</input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio"
+                       id="recommed-3"
+                       name="recommed">Maybe</input>
+            </label>
+        </div>
+  
+        <div class="form-control">
+            <label>Languages and Frameworks known
+                <small>(Check all that apply)</small>
+            </label>
+         
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">C</input></label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">C++</input></label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">C#</input></label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">Java</input></label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Python</input></label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">JavaScript</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">React</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Angular</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Django</input></label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">Spring</input></label>
+        </div>
+  
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+ 
+          
+            <textarea name="comment" id="comment"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+   -->
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            ENVIAR
+        </button>
+    </form>
+</body>
+  
+</html>
